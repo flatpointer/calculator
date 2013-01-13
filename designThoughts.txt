@@ -19,3 +19,5 @@ View
 ---------------------------------
 Will have a bunch of buttons that call the controller's buttonPressed() method, and hand it an appropriate argument, which for now will correspond to the calculator's hitButton arguments
 Should resize itself based on how much screen real estate exists - I don't want to scroll around and hate life if I'm on a tablet. Not that the average tablet doesn't come with a calculator app. But anyway.
+
+awesome button CSS guide: http://naioo.com/blog/css3-buttons-without-any-images/
