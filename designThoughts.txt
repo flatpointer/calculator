@@ -1,0 +1,21 @@
+Calculator.js
+----------------------------------
+display:String? Int?
+numberEntries:Stack that contains up to 2 items. 
+(Could make the display simply the last thing pushed on the stack, as long as we can have the user hit numeric keys and have those numbers get appended to the stack's last item)
+buttonHit: +=-*/. = should make us apply the last buttonHit to the item(s) on the stack (or if one item, return it). Just like a real calculator, if you hit '5', '+', '4', and then hit any of the (+=-*/) buttons, the display'd item should be updated to '9' (the result of popping the 2 items off the stack and applying the last buttonHit) 
+pos/negButton: converts the item at the end of the stack to positive or negative, whichever it isn't (so just runs 'anInt = -anInt', where anInt is what you get when you pop the stack)
+________
+external interface
+hitButton( [0-9] | [+=-\*] | [the pos/neg conversion button] )
+displayedValue
+
+CalculatorController.js
+---------------------------------
+Responds to events from the page, telling the calculator which button is hit. Either will bind to the displayedValue and toss that to the view, or the view will bind directly to it. Probably the former, as if we bother with having a controller to handle events, we might as well not tie the view and the calculator class together
+Will be a very lightweight class; it's basically going to be a central repository of event-handing code, as I don't want that to go in the calculator
+
+View
+---------------------------------
+Will have a bunch of buttons that call the controller's buttonPressed() method, and hand it an appropriate argument, which for now will correspond to the calculator's hitButton arguments
+Should resize itself based on how much screen real estate exists - I don't want to scroll around and hate life if I'm on a tablet. Not that the average tablet doesn't come with a calculator app. But anyway.
