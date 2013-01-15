@@ -4,8 +4,8 @@
   <title>Calculator</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
-  <script type="text/javascript" src="controller.js" >myController = new Controlleri();</script>
+  <script type="text/javascript" src="controller.js" >this.myController = new Controller(); </script>
 </head>
 <body>
-  <button onClick="myController.buttonClicked("winning")>Winning</button>
+  <button onClick="this.myController.buttonClicked('winning')">Winning</button>
 </body>
