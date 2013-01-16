@@ -4,8 +4,18 @@
   <title>Calculator</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
-  <script type="text/javascript" src="controller.js" >this.myController = new Controller(); </script>
+  <script type="text/javascript" src="controller.js" />
+  <script>
+    var controller = new Controller();
+    function handleClick(arg)
+    {
+      controller.buttonClicked(arg);
+    }
+  </script>
+
 </head>
 <body>
-  <button onClick="this.myController.buttonClicked('winning')">Winning</button>
+
+  <button onClick="controller.buttonClicked('winning')">Winning</button>
+
 </body>
