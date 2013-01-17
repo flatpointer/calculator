@@ -4,17 +4,19 @@
   <title>Calculator</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
-  <script type="text/javascript" src="controller.js" />
+
 </head>
 <body>
-  <script>
-    var controller = new Controller();
-    function handleClick(arg)
-    {
-      controller.buttonClicked(arg);
+  <script type="text/javascript" >
+    window.onload = init;
+    function init() {
+      var button = document.getElementById("winningButton");
+      button.onclick = handleShit
+    }
+    function handleShit() {
+      alert("won");
     }
   </script>
-
-  <button onClick="controller.buttonClicked('winning')">Winning</button>
-
+  <button id="winningButton" )">Winning</button>
 </body>
+</html>

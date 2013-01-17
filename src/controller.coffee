@@ -1,7 +1,12 @@
 class Controller
   constructor: (@name) ->
     @calc = new Calculator
+    window.onload = init
 
-  buttonClicked: (arg) ->
+  init: () ->
+    winButton = document.getElementById("winningButton")
+    winButton.onclick =  buttonClicked
+  
+  buttonClicked: () ->
     alert arg
 
