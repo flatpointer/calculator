@@ -1,3 +1,4 @@
-cp src/*.html lib/
-cp src/*.css lib/
-coffee -c --output lib src
+X='/Users/cvick/Dropbox/calculator/calculator'
+cp $X/src/*.html lib/
+cp $X/src/*.css lib/
+coffee -c --output $X/lib $X/src
