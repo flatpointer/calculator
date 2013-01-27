@@ -4,15 +4,27 @@
   <title>Calculator</title>
   <meta charset="utf-8"/>
   <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
-  <script type="text/javascript" src="controller.js" />
+  <script>
+    function clickHandler(id){
+      var displayPane = document.getElementsByName("displayPane")[0];
+      if (id != "clear") { 
+        displayPane.innerHTML= id;
+      } else {
+        displayPane.innerHTML="";
+      } 
+    } 
+  </script>
 </head>
 <body>
   <div id="calculator">
+    <div class="display">
+      <p name="displayPane" id="displayPane"></p>
+    </div> 
     <div class="buttonRow">
       <button id="clear">c</button>
       <button id="pos/neg">+\-</button>
       <button id="/">\</button>
-      <button id="*">x</button>
+      <button onclick="clickHandler(this.id)" id="*">x</button>
     </div>
     <div class="buttonRow">
       <button id="7">7</button>
